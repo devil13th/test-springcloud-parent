@@ -1,0 +1,30 @@
+#project index addr : http://127.0.0.1:7002
+server: 
+  port: 8001
+spring: 
+  application: 
+    #服务名
+    name: eureka-client-hello-provider
+eureka: 
+  instance:
+    instance-id: hello service provider 8001 # 显示的实例名称
+    prefer-ip-address: true     #访问路径可以显示IP地址     
+  client: 
+    #是否向服务注册中心注册自己 默认true
+    register-with-eureka: true
+    #是否检索服务 默认true
+    fetch-registry: true
+    
+    instance: 
+      status-page-url-path: /actuator/info
+      health-check-url-path: /actuator/health
+    service-url: 
+      #eureka注册中心服务器地址
+      defaultZone: http://127.0.0.1:7001/eureka/
+      
+#通过下面的配置启用所有的监控端点，默认情况下，这些端点是禁用的
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
