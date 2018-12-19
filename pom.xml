@@ -58,5 +58,11 @@
 		<module>test-springcloud-Dalston-eureka-server</module>
 		<module>test-springcloud-Dalston-eureka-client-provider</module>
 		<module>test-springcloud-Dalston-eureka-client-consumer</module>
+		<module>test-springcloud-hytrix-server</module>
+		<module>test-springcloud-hytrix-client-hello-provider</module>
+		<module>test-springcloud-hytrix-client-hello-consumer</module>
+		<module>test-springcloud-feign-server</module>
+		<module>test-springcloud-feign-client-hello-provider</module>
+		<module>test-springcloud-feign-client-hello-consumer</module>
 	</modules>
 </project>

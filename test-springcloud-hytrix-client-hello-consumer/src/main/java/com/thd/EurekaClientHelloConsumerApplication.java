@@ -26,9 +26,9 @@ public class EurekaClientHelloConsumerApplication {
 	/**
 	 * 集群启动
 	 * 
-	 * java -jar test-springcloud-eureka-client-hello-consumer-0.0.1-SNAPSHOT.jar --server.port=9001 --eureka.instance.instance-id=consumer9001  --eureka.client.service-url.defaultZone=http://server1:7001/eureka
-     * java -jar test-springcloud-eureka-client-hello-consumer-0.0.1-SNAPSHOT.jar --server.port=9002 --eureka.instance.instance-id=consumer9002  --eureka.client.service-url.defaultZone=http://server2:7002/eureka
-     * java -jar test-springcloud-eureka-client-hello-consumer-0.0.1-SNAPSHOT.jar --server.port=9003 --eureka.instance.instance-id=consumer9003  --eureka.client.service-url.defaultZone=http://server3:7003/eureka
+	 * java -jar test-springcloud-Dalston-eureka-client-consumer-0.0.1-SNAPSHOT.jar --server.port=9001 --eureka.instance.instance-id=consumer9001  --eureka.client.service-url.defaultZone=http://server1:7001/eureka
+     * java -jar test-springcloud-Dalston-eureka-client-consumer-0.0.1-SNAPSHOT.jar --server.port=9002 --eureka.instance.instance-id=consumer9002  --eureka.client.service-url.defaultZone=http://server2:7002/eureka
+     * java -jar test-springcloud-Dalston-eureka-client-consumer-0.0.1-SNAPSHOT.jar --server.port=9003 --eureka.instance.instance-id=consumer9003  --eureka.client.service-url.defaultZone=http://server3:7003/eureka
 	 */
 
 }

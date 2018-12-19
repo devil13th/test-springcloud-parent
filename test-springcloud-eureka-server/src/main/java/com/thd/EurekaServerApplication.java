@@ -23,9 +23,9 @@ public class EurekaServerApplication {
 	 * 127.0.0.1 server3
 	 * 
 	 * 启动命令:
-	 * java -jar eserver.jar --server.port=7001 --eureka.instance.hostname=server1 --eureka.client.service-url.defaultZone=http://server2:7002/eureka,http://server3:7003/eureka,http://server1:7001/eureka
-	 * java -jar eserver.jar --server.port=7002 --eureka.instance.hostname=server2 --eureka.client.service-url.defaultZone=http://server1:7001/eureka,http://server3:7003/eureka,http://server2:7002/eureka
-	 * java -jar eserver.jar --server.port=7003 --eureka.instance.hostname=server3 --eureka.client.service-url.defaultZone=http://server1:7001/eureka,http://server2:7002/eureka,http://server3:7003/eureka
+	 * java -jar test-springcloud-eureka-server-0.0.1-SNAPSHOT.jar --server.port=7001 --eureka.instance.hostname=server1 --eureka.client.service-url.defaultZone=http://server2:7002/eureka,http://server3:7003/eureka,http://server1:7001/eureka
+	 * java -jar test-springcloud-eureka-server-0.0.1-SNAPSHOT.jar --server.port=7002 --eureka.instance.hostname=server2 --eureka.client.service-url.defaultZone=http://server1:7001/eureka,http://server3:7003/eureka,http://server2:7002/eureka
+	 * java -jar test-springcloud-eureka-server-0.0.1-SNAPSHOT.jar --server.port=7003 --eureka.instance.hostname=server3 --eureka.client.service-url.defaultZone=http://server1:7001/eureka,http://server2:7002/eureka,http://server3:7003/eureka
 	 */
 
 }
