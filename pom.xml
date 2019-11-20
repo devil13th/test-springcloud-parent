@@ -52,7 +52,6 @@
 		</plugins>
 	</build>
 	<modules>
-		<module>thd-springcloud-eureka-client-service-hello</module>
 		<module>test-springcloud-eureka-client-hello-provider</module>
 		<module>test-springcloud-eureka-client-hello-consumer</module>
 		<module>test-springcloud-Dalston-eureka-server</module>
