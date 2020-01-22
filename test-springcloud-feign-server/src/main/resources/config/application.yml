@@ -2,17 +2,18 @@ server:
   port: 7001
 spring: 
   application: 
-    name: eurka-server
+    name: eurka-server #eureka 服务端的实例名称
 eureka: 
-  instance: 
-    #服务注册中心实例的主机名
-    hostname: 127.0.0.1 #eureka服务端的实例名称
+  instance:
+    instance-id: eureka server 7001 # 显示的实例名称,eureka控制台中 服务实例status中的内容
+    # 服务注册中心实例的主机名
+    hostname: 127.0.0.1 #eureka 客户端的实例的IP (这里是客户端!如果不向eureka注册中心注册自己,则无用,用于展示健康状态的地址)
   client: 
-    #是否向服务注册中心注册自己
-    register-with-eureka: false
-    #是否检索服务
+    # 是否向服务注册中心注册自己  如果本身是eureka服务则不用注册自己
+    register-with-eureka: true
+    #是否检索eureka上的服务   如果是服务的消费者才会设置为true 从eureka上获取服务以便调用服务
     fetch-registry: false
     service-url: #特别注意  不要写成serverUrl否则不认,使用localhost:8761/eureka作为服务注册中心
-      #服务注册中心的配置内容，指定服务注册中心的位置 eureka注册中心服务器地址
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+      # 服务注册中心的配置内容，指定服务注册中心的位置 eureka注册中心服务器地址
+      defaultZone: http://127.0.0.1:7001/eureka
 

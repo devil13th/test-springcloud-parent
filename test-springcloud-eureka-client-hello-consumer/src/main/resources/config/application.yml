@@ -4,6 +4,14 @@ spring:
   application: 
     #服务名
     name: eureka-client-hello-consumer
+
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true  # 开启Spring Cloud的重试功能  设置为false即可关掉ribbon的重试机制，建议关掉，否则要做好幂等处理
+
+#  ==========================  eureka 配置  ===========================
+# 注意驼峰和中划线的使用，请查看 EurekaClientAutoConfiguration 类
 eureka: 
   instance:
     instance-id: hello service consumer 9001 # 显示的实例名称
@@ -19,7 +27,52 @@ eureka:
     service-url: 
       #eureka注册中心服务器地址
       defaultZone: http://127.0.0.1:7001/eureka/
-      
+
+# ========================== ribbon 配置 ===========================
+# ribbon 全局配置
+# 使用ribbon 的全局配置ConnectTimeout和ReadTimeout可能不生效，参见启动类中的RestTemplate
+ribbon:
+  ConnectTimeout: 1000 # 请求连接的超时时间
+  ReadTimeout: 2000 # 请求处理的超时时间
+  MaxTotalConnections: 500 # 最大连接数
+  MaxConnectionsPerHost: 500 # 每个host最大连接数
+  ######## 重试相关配置 , 这个重试配置 对于ribbon 是生效的  ########
+  # 重试次数= 1(首次访问) + MaxAutoRetries(重试次数)  + MaxAutoRetriesNextServer(切换服务的首次访问) + MaxAutoRetriesNextServer* MaxAutoRetries(每次切换服务的重试次数)
+  # 对当前实例的重试次数
+  MaxAutoRetries: 3
+  # 切换实例的重试次数
+  MaxAutoRetriesNextServer: 1
+  # 如果该值为 false 那么只对 get 方法请起作用,如果为 true 那么对所有的请求方法起作用, 但是要true要慎用,如果服务端的接口不是幂等接口那么很有可能会产生重复数据
+  OkToRetryOnAllOperations: true
+  # 对Http响应码进行重试
+  # retryableStatusCodes: 500,404,502
+
+
+
+# 也可以为每个Ribbon客户端设置不同的超时时间, 通过服务名称进行指定：
+# EUREKA-CLIENT-HELLO-PROVIDER 为server-id
+eureka-client-hello-provider:
+  ribbon:
+    ConnectTimeout: 1000 # 请求连接的超时时间
+    ReadTimeout: 2000 # 请求处理的超时时间
+    ######## 重试相关配置 ########
+    # 重试次数= 1(首次访问) + MaxAutoRetries(重试次数)  + MaxAutoRetriesNextServer(切换服务的首次访问) + MaxAutoRetriesNextServer* MaxAutoRetries(每次切换服务的重试次数)
+    # 对当前实例的重试次数
+    MaxAutoRetries: 3
+    # 切换实例的重试次数
+    MaxAutoRetriesNextServer: 1
+    # 如果该值为 false 那么只对 get 方法请起作用,如果为 true 那么对所有的请求方法起作用, 但是要true要慎用,如果服务端的接口不是幂等接口那么很有可能会产生重复数据
+    OkToRetryOnAllOperations: true
+
+
+
+
+
+
+
+
+
+
 #通过下面的配置启用所有的监控端点，默认情况下，这些端点是禁用的
 management:
   endpoints:

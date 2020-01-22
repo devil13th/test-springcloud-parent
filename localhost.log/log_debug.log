@@ -1,0 +1,30 @@
+2020-01-02 17:34:01.416 [http-nio-9001-exec-1] DEBUG com.thd.controller.UserController - test
+2020-01-02 17:34:01.745 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-1] DEBUG com.thd.service.UserService - [UserService#test] ---> GET http://EUREKA-CLIENT-HELLO-PROVIDER/user/test/aaaabbdd HTTP/1.1
+2020-01-02 17:34:01.745 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-1] DEBUG com.thd.service.UserService - [UserService#test] ---> END HTTP (0-byte body)
+2020-01-02 17:34:02.243 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-1] DEBUG com.thd.service.UserService - [UserService#test] <--- HTTP/1.1 200 (497ms)
+2020-01-02 17:34:02.243 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-1] DEBUG com.thd.service.UserService - [UserService#test] content-length: 13
+2020-01-02 17:34:02.254 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-1] DEBUG com.thd.service.UserService - [UserService#test] content-type: text/plain;charset=UTF-8
+2020-01-02 17:34:02.254 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-1] DEBUG com.thd.service.UserService - [UserService#test] date: Thu, 02 Jan 2020 09:34:02 GMT
+2020-01-02 17:34:02.254 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-1] DEBUG com.thd.service.UserService - [UserService#test] 
+2020-01-02 17:34:02.256 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-1] DEBUG com.thd.service.UserService - [UserService#test] test aaaabbdd
+2020-01-02 17:34:02.256 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-1] DEBUG com.thd.service.UserService - [UserService#test] <--- END HTTP (13-byte body)
+2020-01-02 17:34:07.744 [http-nio-9001-exec-3] DEBUG com.thd.controller.UserController - test
+2020-01-02 17:34:07.746 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-2] DEBUG com.thd.service.UserService - [UserService#test] ---> GET http://EUREKA-CLIENT-HELLO-PROVIDER/user/test/aaaabbdd HTTP/1.1
+2020-01-02 17:34:07.746 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-2] DEBUG com.thd.service.UserService - [UserService#test] ---> END HTTP (0-byte body)
+2020-01-02 17:34:07.752 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-2] DEBUG com.thd.service.UserService - [UserService#test] <--- HTTP/1.1 200 (5ms)
+2020-01-02 17:34:07.752 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-2] DEBUG com.thd.service.UserService - [UserService#test] content-length: 13
+2020-01-02 17:34:07.752 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-2] DEBUG com.thd.service.UserService - [UserService#test] content-type: text/plain;charset=UTF-8
+2020-01-02 17:34:07.752 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-2] DEBUG com.thd.service.UserService - [UserService#test] date: Thu, 02 Jan 2020 09:34:07 GMT
+2020-01-02 17:34:07.752 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-2] DEBUG com.thd.service.UserService - [UserService#test] 
+2020-01-02 17:34:07.752 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-2] DEBUG com.thd.service.UserService - [UserService#test] test aaaabbdd
+2020-01-02 17:34:07.752 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-2] DEBUG com.thd.service.UserService - [UserService#test] <--- END HTTP (13-byte body)
+2020-01-02 17:34:07.977 [http-nio-9001-exec-4] DEBUG com.thd.controller.UserController - test
+2020-01-02 17:34:07.978 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-3] DEBUG com.thd.service.UserService - [UserService#test] ---> GET http://EUREKA-CLIENT-HELLO-PROVIDER/user/test/aaaabbdd HTTP/1.1
+2020-01-02 17:34:07.978 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-3] DEBUG com.thd.service.UserService - [UserService#test] ---> END HTTP (0-byte body)
+2020-01-02 17:34:07.983 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-3] DEBUG com.thd.service.UserService - [UserService#test] <--- HTTP/1.1 200 (4ms)
+2020-01-02 17:34:07.983 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-3] DEBUG com.thd.service.UserService - [UserService#test] content-length: 13
+2020-01-02 17:34:07.983 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-3] DEBUG com.thd.service.UserService - [UserService#test] content-type: text/plain;charset=UTF-8
+2020-01-02 17:34:07.983 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-3] DEBUG com.thd.service.UserService - [UserService#test] date: Thu, 02 Jan 2020 09:34:07 GMT
+2020-01-02 17:34:07.983 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-3] DEBUG com.thd.service.UserService - [UserService#test] 
+2020-01-02 17:34:07.983 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-3] DEBUG com.thd.service.UserService - [UserService#test] test aaaabbdd
+2020-01-02 17:34:07.984 [hystrix-EUREKA-CLIENT-HELLO-PROVIDER-3] DEBUG com.thd.service.UserService - [UserService#test] <--- END HTTP (13-byte body)

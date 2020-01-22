@@ -5,7 +5,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.2.RELEASE</version>
+<!--		<version>1.5.2.RELEASE</version>-->
+		<version>2.0.1.RELEASE</version>
 	</parent>
 
 	<groupId>test.springcloud</groupId>
@@ -52,6 +53,7 @@
 		</plugins>
 	</build>
 	<modules>
+		<module>test-springcloud-eureka-server</module>
 		<module>test-springcloud-eureka-client-hello-provider</module>
 		<module>test-springcloud-eureka-client-hello-consumer</module>
 		<module>test-springcloud-Dalston-eureka-server</module>
@@ -63,5 +65,6 @@
 		<module>test-springcloud-feign-server</module>
 		<module>test-springcloud-feign-client-hello-provider</module>
 		<module>test-springcloud-feign-client-hello-consumer</module>
-	</modules>
+        <module>test-springcloud-zuul</module>
+    </modules>
 </project>

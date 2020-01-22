@@ -1,0 +1,5 @@
+2020-01-02 17:33:46.527 [main] INFO  com.thd.EurekaClientHelloConsumerApplication - No active profile set, falling back to default profiles: default
+2020-01-02 17:33:54.800 [main] INFO  com.thd.EurekaClientHelloConsumerApplication - Started EurekaClientHelloConsumerApplication in 10.776 seconds (JVM running for 11.347)
+2020-01-02 17:34:01.416 [http-nio-9001-exec-1] INFO  com.thd.controller.UserController - test
+2020-01-02 17:34:07.744 [http-nio-9001-exec-3] INFO  com.thd.controller.UserController - test
+2020-01-02 17:34:07.977 [http-nio-9001-exec-4] INFO  com.thd.controller.UserController - test

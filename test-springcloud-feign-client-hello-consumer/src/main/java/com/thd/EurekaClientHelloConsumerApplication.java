@@ -7,8 +7,10 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.retry.annotation.EnableRetry;
 import org.springframework.web.client.RestTemplate;
 
 @EnableHystrix // Feign默认是开启，这个注解可以不加的
@@ -26,7 +28,13 @@ public class EurekaClientHelloConsumerApplication {
     }
 	
 	public static void main(String[] args) {
-		SpringApplication.run(EurekaClientHelloConsumerApplication.class, args);
+
+		ConfigurableApplicationContext cfg = SpringApplication.run(EurekaClientHelloConsumerApplication.class, args);
+		String[] beans = cfg.getBeanDefinitionNames();
+		for(int i = 0 , j = beans.length ; i < j ; i++){
+			System.out.println(beans[i]);
+		}
+
 	}
 	
 	
