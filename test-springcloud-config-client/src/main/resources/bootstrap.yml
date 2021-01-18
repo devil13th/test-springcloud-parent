@@ -1,0 +1,28 @@
+#前缀路径
+#server:
+#  servlet:
+#    context-path: /tvmanage # 访问地址：http://localhost:8090/tvmanage/
+server:
+  port: 8082
+spring:
+  application:
+    name: management-equip
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      #对应的配置服务中的应用名称
+      name: common
+      #对应config server中配置文件的{label 分支}
+      label: master
+      #对应config server中配置文件的{profile 环境}
+      profile: dev
+#服务注册
+eureka:
+  instance:
+    hostname: equip
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:2001/eureka
