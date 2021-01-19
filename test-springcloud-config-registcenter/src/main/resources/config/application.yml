@@ -15,5 +15,5 @@ eureka:
     fetch-registry: false
     service-url: #特别注意  不要写成serverUrl否则不认,使用localhost:8761/eureka作为服务注册中心
       # 服务注册中心的配置内容，指定服务注册中心的位置 eureka注册中心服务器地址
-      defaultZone: http://127.0.0.1:7001/eureka
+      defaultZone: http://127.0.0.1:2001/eureka
 

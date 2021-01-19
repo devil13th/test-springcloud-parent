@@ -1,0 +1,13 @@
+server:
+  port: 8012
+management:
+  #actuator端口 如果不配置做默认使用上面8080端口
+  server:
+    port: 9090
+  endpoints:
+    web:
+      exposure:
+        #默认值访问health,info端点  用*可以包含全部端点
+        include: "*"
+      #修改访问路径 2.0之前默认是/; 2.0默认是/actuator可以通过这个属性值修改
+      base-path: /actuator
