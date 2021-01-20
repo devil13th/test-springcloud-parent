@@ -1,0 +1,16 @@
+server:
+  port: 8012
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      #更改配置服务器的位置，默认地址是http://localhost:8888
+      uri: http://127.0.0.1:7007/
+      #对应spring.profiles.active
+      profile: dev
+      #分支名。当配置服务器是git时，默认是master
+      label: dev
+      # 配置文件名称  如果不配置则默认使用spring.application.name作为配置文件名称
+      name: config-client
+

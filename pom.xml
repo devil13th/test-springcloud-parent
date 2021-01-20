@@ -66,8 +66,10 @@
 		<module>test-springcloud-feign-client-hello-provider</module>
 		<module>test-springcloud-feign-client-hello-consumer</module>
         <module>test-springcloud-zuul</module>
-        <module>test-springcloud-config-server</module>
-		<module>test-springcloud-config-client</module>
-		<module>test-springcloud-config-registcenter</module>
+        <module>test-springcloud-config-basic-server</module>
+		<module>test-springcloud-config-basic-client</module>
+		<module>test-springcloud-config-cloud-registcenter</module>
+		<module>test-springcloud-config-cloud-server</module>
+		<module>test-springcloud-config-cloud-client</module>
     </modules>
 </project>

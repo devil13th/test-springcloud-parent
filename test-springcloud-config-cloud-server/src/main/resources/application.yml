@@ -25,9 +25,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:2001/eureka
-# 暴露bus-refresh接口用于更新git上的配置
-management:
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh

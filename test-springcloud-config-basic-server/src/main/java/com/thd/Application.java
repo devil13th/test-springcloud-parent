@@ -12,11 +12,13 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  * @DATE: 2021/1/18 17:34
  **/
 @SpringBootApplication
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
 @EnableConfigServer
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-        // 启动后浏览 http://127.0.0.1:7007/master/common-a.yml和http://127.0.0.1:7007/master/common-dev.yml
+        // 启动后浏览 http://127.0.0.1:7007/master/common-a.yml
+        // http://127.0.0.1:7007/master/common-dev.yml
+        // http://127.0.0.1:7007/master/common-prod.yml
     }
 }

@@ -1,0 +1,29 @@
+server:
+  port: 8012
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      # 配置文件名称  如果不配置则默认使用spring.application.name作为配置文件名称
+      name: customname
+      # 分支名。当使用配置服务器是git时，默认是master
+      label: test
+      # 对应spring.profiles.active
+      profile: prod
+
+      ## 服务发现
+      discovery:
+        #默认false，设为true表示使用注册中心中的configserver配置，而不是自己配置configserver的uri
+        enabled: true
+        # 指定config server在服务发现中的serviceId，默认为：configserver
+        service-id: config-server
+
+#服务注册
+eureka:
+  instance:
+    hostname: equip
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:2001/eureka

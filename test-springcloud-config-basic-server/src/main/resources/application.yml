@@ -1,0 +1,33 @@
+server:
+  port: 7007
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # git仓库地址
+          uri: https://github.com/devil13th/cloudconfig
+          # 用户名和密码
+          username: devil13th
+          password: AAbb__1234qwer
+          # 本地git配置路径
+          basedir: D:\deleteme\cloudconfig
+      # git分支名称
+      label: master
+
+# 注册中心
+#eureka:
+#  instance:
+#    hostname: config-server
+#    prefer-ip-address: true
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:2001/eureka
+# 暴露bus-refresh接口用于更新git上的配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
