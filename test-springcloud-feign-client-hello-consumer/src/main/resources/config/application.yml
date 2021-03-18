@@ -1,5 +1,5 @@
 server: 
-  port: 9001
+  port: 2003
 spring: 
   application:
     # 注册服务的名称，注意服务器名称不能使用下划线连接，可以使用中划线连接
@@ -11,7 +11,7 @@ spring:
         enabled: false  # 开启Spring Cloud的重试功能
 eureka: 
   instance:
-    instance-id: hello service consumer 9001 # 显示的实例名称
+    instance-id: hello service consumer 2001 # 显示的实例名称
     prefer-ip-address: true    # 当其它服务获取地址时提供ip而不是hostname
     ip-address: 127.0.0.1 # 指定自己的ip信息，不指定的话会自己寻找
   client: 
@@ -24,7 +24,7 @@ eureka:
       health-check-url-path: /actuator/health
     service-url: 
       #eureka注册中心服务器地址
-      defaultZone: http://127.0.0.1:7001/eureka/
+      defaultZone: http://127.0.0.1:2001/eureka/
 
 
 
